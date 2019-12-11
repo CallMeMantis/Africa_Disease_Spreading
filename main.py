@@ -139,16 +139,6 @@ class Disease:
 
     def save_png(self, time, map):
 
-        # im = Image.open(str(self.filename))
-        # rgb_im = im.convert('RGB')
-        # # rgb_im = rgb_im.save('testing.png')
-        # rgb_data = []
-        # pix = rgb_im.load()
-        # for x in range(im.size[0]):
-        #     rgb_data.append([])
-        #     for y in range(im.size[1]):
-        #         rgb_data[x].append(pix[x, y])
-
         time = str(self.time)
         name = 'disease_fire_' + time + ".png"
         name = str(name)
@@ -166,13 +156,7 @@ class Disease:
             Disease.save_png(self, self.time, self.map)
             Disease.spread_disease(self)
             self.time += 1
-
-            # for i in range(len(self.map)):
-            #     print(self.map[i])
-            # print()
-
-# rgb_data = get_rgba("main.jpg")
-# print(get_disease_probability(rgb_data))
+            
 
 disease = Disease("main2.jpg")
 disease.main()
